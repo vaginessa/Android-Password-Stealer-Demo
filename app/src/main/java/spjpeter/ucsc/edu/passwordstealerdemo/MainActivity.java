@@ -43,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
                 new ValueCallback<String>() {
                     @Override
                     public void onReceiveValue(String value) {
-                        toast(value);
+                        if (!value.equals("null")) {
+                            toast("Your password is: \""+value+"\"");
+                        }
                     }
                 });
     }
